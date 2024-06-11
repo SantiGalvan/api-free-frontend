@@ -7,7 +7,7 @@ export default {
 <template>
 
     <header>
-        <nav class="container">
+        <nav class="container mb-5">
             <div class="logo">
                 <figure>
                     <img src="/src/assets/img/logo.jpg" alt="Logo" class="img-fluid rounded-circle">
