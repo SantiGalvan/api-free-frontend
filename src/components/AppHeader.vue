@@ -15,7 +15,9 @@ export default {
             </div>
             <div class="links">
                 <ul class="d-flex justify-content-center gap-3">
-                    <li><a href="">Posts</a></li>
+                    <li>
+                        <RouterLink :to="{ name: 'home' }">Posts</RouterLink>
+                    </li>
                     <li><a href="">Categories</a></li>
                     <li><a href="">Tags</a></li>
                 </ul>
