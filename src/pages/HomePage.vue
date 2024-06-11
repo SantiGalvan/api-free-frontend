@@ -1,7 +1,7 @@
 <script>
 import axios from 'axios';
 import PostsList from '../components/posts/PostsList.vue'
-const postsUri = 'http://localhost:3000/posts'
+const postsUri = 'http://localhost:3000/posts/'
 
 export default {
     name: 'HomePage',
@@ -33,14 +33,4 @@ export default {
     </div>
 </template>
 
-<style lang="scss">
-.card {
-    .card-header {
-        height: 80px;
-    }
-
-    .card-body {
-        height: 150px;
-    }
-}
-</style>
+<style lang="scss"></style>
