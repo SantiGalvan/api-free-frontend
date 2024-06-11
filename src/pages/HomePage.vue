@@ -27,6 +27,9 @@ export default {
 
 <template>
     <div class="container">
+        <RouterLink :to="{ name: 'create-post' }" class="btn btn-success">
+            <FontAwesomeIcon icon="fa-solid fa-square-plus" class="me-2" />Crea nuovo post
+        </RouterLink>
         <div class="row mb-5">
             <PostsList v-for="post in posts" :key="post.id" :post="post" />
         </div>

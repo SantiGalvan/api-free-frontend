@@ -75,14 +75,14 @@ export default {
         <!-- Card Footer PostDetail -->
         <div v-else class="card-footer d-flex justify-content-between">
             <button @click="$router.back()" class="btn btn-secondary">
-                <FontAwesomeIcon icon="fa-solid fa-arrow-left" class="me-2" />Torna indietro
+                <FontAwesomeIcon icon="fa-solid fa-arrow-left" class="me-2 fa-beat-fade" />Torna indietro
             </button>
             <div class="d-flex gap-4">
                 <RouterLink class="btn btn-warning">
-                    <FontAwesomeIcon icon="fa-solid fa-pen" class="me-2" />Modifica
+                    <FontAwesomeIcon icon="fa-solid fa-pen" class="me-2 fa-bounce" />Modifica
                 </RouterLink>
                 <RouterLink class="btn btn-danger">
-                    <FontAwesomeIcon icon="fa-solid fa-trash-can" class="me-2" />Elimina
+                    <FontAwesomeIcon icon="fa-solid fa-trash-can" class="me-2 fa-shake" />Elimina
                 </RouterLink>
             </div>
         </div>
