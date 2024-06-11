@@ -3,18 +3,16 @@ import axios from 'axios';
 
 const categoriesUri = 'http://localhost:3000/categories/';
 const tagsUri = 'http://localhost:3000/tags/';
+const postsUri = 'http://localhost:3000/posts/'
+
+const defaultPost = { title: '', categoryId: null, content: '', tags: [], published: true, image: null, userId: null };
 
 export default {
     name: 'CreatePost',
     data: () => ({
         categories: [],
         tags: [],
-        post: {
-            title: '',
-            content: '',
-            categoryId: 'Seleziona una categoria',
-            tags: []
-        }
+        post: defaultPost
     }),
     methods: {
         async fetchCategories() {
@@ -32,6 +30,11 @@ export default {
             } catch (err) {
                 console.error(err);
             }
+        },
+        submitForm() {
+            axios.post(postsUri, this.post).then(() => {
+                this.post = { ...defaultPost }
+            }).catch(err => { console.error(err) }).then(() => { });
         }
     },
     created() {
@@ -42,7 +45,7 @@ export default {
 </script>
 
 <template>
-    <form action="http://localhost:3000/posts/" method="post" class="container">
+    <form @submit.prevent="submitForm" class="container">
         <div class="row">
 
             <div class="col-5">
@@ -53,7 +56,7 @@ export default {
                     <div class="col-12">
                         <div class="mb-3">
                             <label for="title" class="form-label">Titolo</label>
-                            <input v-model="post.title" type="text" class="form-control" id="title"
+                            <input v-model.trim="post.title" type="text" class="form-control" id="title"
                                 placeholder="Nome del Post">
                         </div>
                     </div>
@@ -92,7 +95,7 @@ export default {
                 <!-- Contenuto -->
                 <div class="mb-3">
                     <label for="contente" class="form-label">Contenuto del Post</label>
-                    <textarea v-model="post.content" class="form-control" name="content" id="content" cols="30"
+                    <textarea v-model.trim="post.content" class="form-control" name="content" id="content" cols="30"
                         rows="10"></textarea>
                 </div>
 
