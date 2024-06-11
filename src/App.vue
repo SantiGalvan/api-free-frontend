@@ -1,4 +1,5 @@
 <script>
+import { RouterView } from 'vue-router';
 import AppHeader from './components/AppHeader.vue';
 import HomePage from './pages/HomePage.vue';
 
@@ -13,7 +14,7 @@ export default {
   <AppHeader />
 
   <main>
-    <HomePage />
+    <RouterView />
   </main>
 </template>
 

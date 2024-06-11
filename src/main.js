@@ -14,6 +14,9 @@ import { faArrowLeft, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icon
 import { faCompass } from '@fortawesome/free-regular-svg-icons'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 
+// Importo il router
+import { router } from './router'
+
 // Icone da caricare
 library.add(faArrowLeft, faMagnifyingGlass);
 library.add(faCompass);
@@ -23,5 +26,7 @@ const app = createApp(App);
 
 // Rendiamo le icone disponibili globalmente
 app.component('FontAwesomeIcon', FontAwesomeIcon);
+
+app.use(router);
 
 app.mount('#app');
