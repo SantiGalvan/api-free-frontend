@@ -10,7 +10,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 // Importiamo le icone da utilizzare
-import { faArrowLeft, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft, faMagnifyingGlass, faPen, faTrashCan } from '@fortawesome/free-solid-svg-icons'
 import { faCompass } from '@fortawesome/free-regular-svg-icons'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 
@@ -18,7 +18,7 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { router } from './router'
 
 // Icone da caricare
-library.add(faArrowLeft, faMagnifyingGlass);
+library.add(faArrowLeft, faMagnifyingGlass, faPen, faTrashCan);
 library.add(faCompass);
 library.add(faFacebook);
 
