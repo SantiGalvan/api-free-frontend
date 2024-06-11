@@ -1,0 +1,36 @@
+header {
+    background-color: #e5e5e5;
+
+    nav {
+        height: 80px;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+
+        figure {
+            width: 60px;
+            margin-bottom: 0;
+        }
+    }
+
+    ul {
+        list-style: none;
+        margin-bottom: 0;
+
+        a {
+            text-decoration: none;
+            color: #14213d;
+            padding-bottom: 5px;
+
+            &:hover {
+                border-bottom: 2px solid #57849f;
+                color: #57849f;
+            }
+        }
+    }
+
+}
